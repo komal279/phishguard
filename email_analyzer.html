@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Email Analyzer | PhishGuard</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container navbar">
+      <a href="index.html" class="brand" aria-label="PhishGuard home">
+        <span class="brand-mark">PG</span>
+        <span>PHISHGUARD</span>
+      </a>
+
+      <nav class="nav-links" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="url_analyzer.html">URL Analyzer</a>
+        <a href="email_analyzer.html">Email Analyzer</a>
+        <a href="reports.html">Reports</a>
+        <a href="awareness.html">Awareness</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="login.html" class="btn btn-ghost">Login</a>
+        <button class="mobile-toggle" aria-label="Toggle navigation">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="page-shell">
+    <div class="container">
+      <div class="page-header">
+        <span class="eyebrow">Email Analyzer</span>
+        <h1>Examine Email Threats</h1>
+      </div>
+
+      <div class="two-col">
+        <article class="dashboard-card glass">
+          <h3>Paste Email Content</h3>
+          <form id="emailForm">
+            <div class="form-group">
+              <textarea id="emailContent" class="textarea" rows="12" placeholder="Paste email content here...">Urgent action required. Your account has been suspended. Click here to verify your password immediately.</textarea>
+            </div>
+            <div class="scan-input-group">
+              <button type="submit" class="btn btn-primary">Analyze Email</button>
+              <button type="button" class="btn btn-ghost" data-clear-target="emailContent">Clear</button>
+            </div>
+          </form>
+
+          <div id="emailResult" class="scan-results visible result-malicious" aria-live="polite">
+            <div class="result-status">
+              <h3>Phishing Email Detected</h3>
+              <span class="status-pill status-malicious">Phishing</span>
+            </div>
+            <p>Threat Score: <strong>82%</strong></p>
+            <p>Analysis: The message contains urgent language, credential requests, and suspicious wording commonly used in phishing attacks.</p>
+          </div>
+        </article>
+
+        <article class="dashboard-card glass">
+          <h3>Threat Indicators</h3>
+          <div class="report-list">
+            <div class="list-row"><span>Suspicious Keywords</span><strong>Detected</strong></div>
+            <div class="list-row"><span>Sender Email</span><strong>Unverified</strong></div>
+            <div class="list-row"><span>Embedded Links</span><strong>Multiple</strong></div>
+            <div class="list-row"><span>Urgent Language</span><strong>High</strong></div>
+            <div class="list-row"><span>Threat Level</span><strong>Critical</strong></div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </main>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

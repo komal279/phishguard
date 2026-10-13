@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Panel | PhishGuard</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container navbar">
+      <a href="index.html" class="brand" aria-label="PhishGuard home">
+        <span class="brand-mark">PG</span>
+        <span>PHISHGUARD</span>
+      </a>
+
+      <nav class="nav-links" aria-label="Main navigation">
+        <a href="admin.html">Overview</a>
+        <a href="#users">Users</a>
+        <a href="#scans">Scans</a>
+        <a href="#feedback">Feedback</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="index.html" class="btn btn-ghost">Exit</a>
+        <button class="mobile-toggle" aria-label="Toggle navigation">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="dashboard-shell">
+    <div class="container">
+      <div class="page-header">
+        <span class="eyebrow">Admin Panel</span>
+        <h1>System Overview</h1>
+      </div>
+
+      <div class="admin-grid">
+        <article class="admin-card glass">
+          <div class="card-label">Total Users</div>
+          <div class="card-value"><span data-count="1208" data-suffix="">0</span></div>
+        </article>
+        <article class="admin-card glass">
+          <div class="card-label">Total Scans</div>
+          <div class="card-value"><span data-count="4560" data-suffix="">0</span></div>
+        </article>
+        <article class="admin-card glass">
+          <div class="card-label">Threats Detected</div>
+          <div class="card-value"><span data-count="2140" data-suffix="">0</span></div>
+        </article>
+        <article class="admin-card glass">
+          <div class="card-label">Active Users</div>
+          <div class="card-value"><span data-count="928" data-suffix="">0</span></div>
+        </article>
+      </div>
+
+      <div class="two-col">
+        <article class="dashboard-card glass" id="users">
+          <h3>User Management</h3>
+          <div class="table-wrap">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Email</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Jane Miller</td>
+                  <td>jane@phishguard.com</td>
+                  <td><span class="badge badge-safe">Active</span></td>
+                </tr>
+                <tr>
+                  <td>Daniel King</td>
+                  <td>daniel@phishguard.com</td>
+                  <td><span class="badge badge-warning">Review</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </article>
+
+        <article class="dashboard-card glass" id="scans">
+          <h3>System Statistics</h3>
+          <div class="report-list">
+            <div class="list-row"><span>Failed Sign-ins</span><strong>134</strong></div>
+            <div class="list-row"><span>Flagged Emails</span><strong>406</strong></div>
+            <div class="list-row"><span>Safe Links</span><strong>3156</strong></div>
+            <div class="list-row"><span>Malicious Links</span><strong>1182</strong></div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </main>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

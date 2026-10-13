@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sender Authentication | PhishGuard</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container navbar">
+      <a href="index.html" class="brand" aria-label="PhishGuard home">
+        <span class="brand-mark">PG</span>
+        <span>PHISHGUARD</span>
+      </a>
+
+      <nav class="nav-links" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="url_analyzer.html">URL Analyzer</a>
+        <a href="email_analyzer.html">Email Analyzer</a>
+        <a href="sender_auth.html">Sender Auth</a>
+        <a href="reports.html">Reports</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="login.html" class="btn btn-ghost">Login</a>
+        <button class="mobile-toggle" aria-label="Toggle navigation">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="page-shell">
+    <div class="container">
+      <div class="page-header">
+        <span class="eyebrow">Sender Authentication</span>
+        <h1>SPF, DKIM & DMARC Validation</h1>
+      </div>
+
+      <div class="two-col">
+        <article class="dashboard-card glass">
+          <h3>Authentication Analysis</h3>
+          <div class="status-grid">
+            <div class="status-box">
+              <span class="muted">SPF Status</span>
+              <strong style="color: var(--green);">Passed</strong>
+            </div>
+            <div class="status-box">
+              <span class="muted">DKIM Status</span>
+              <strong style="color: var(--amber);">Warning</strong>
+            </div>
+            <div class="status-box">
+              <span class="muted">DMARC Status</span>
+              <strong style="color: var(--green);">Passed</strong>
+            </div>
+            <div class="status-box">
+              <span class="muted">Overall</span>
+              <strong style="color: var(--cyan);">Secure</strong>
+            </div>
+          </div>
+        </article>
+
+        <article class="dashboard-card glass">
+          <h3>Recommendations</h3>
+          <div class="report-list">
+            <div class="list-row"><span>SPF</span><strong>Configured correctly</strong></div>
+            <div class="list-row"><span>DKIM</span><strong>Review signature alignment</strong></div>
+            <div class="list-row"><span>DMARC</span><strong>Policy is active</strong></div>
+            <div class="list-row"><span>Action</span><strong>Monitor suspicious mail</strong></div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </main>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

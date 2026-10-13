@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>URL Analyzer | PhishGuard</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container navbar">
+      <a href="index.html" class="brand" aria-label="PhishGuard home">
+        <span class="brand-mark">PG</span>
+        <span>PHISHGUARD</span>
+      </a>
+
+      <nav class="nav-links" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="url_analyzer.html">URL Analyzer</a>
+        <a href="email_analyzer.html">Email Analyzer</a>
+        <a href="reports.html">Reports</a>
+        <a href="awareness.html">Awareness</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="login.html" class="btn btn-ghost">Login</a>
+        <button class="mobile-toggle" aria-label="Toggle navigation">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="page-shell">
+    <div class="container">
+      <div class="page-header">
+        <span class="eyebrow">URL Analyzer</span>
+        <h1>Investigate Suspicious Links</h1>
+      </div>
+
+      <div class="two-col">
+        <article class="dashboard-card glass">
+          <h3>Analyze URL</h3>
+          <form id="analyzerForm">
+            <div class="form-group">
+              <label for="analyzerUrl">Enter URL</label>
+              <input id="analyzerUrl" class="input" type="url" placeholder="https://example.com" required />
+            </div>
+            <div class="scan-input-group">
+              <button type="submit" class="btn btn-primary">Analyze</button>
+              <button type="button" class="btn btn-ghost" data-clear-target="analyzerUrl">Clear</button>
+            </div>
+          </form>
+
+          <div id="analyzerResult" class="scan-results visible result-safe" aria-live="polite">
+            <div class="result-status">
+              <h3>Safe URL</h3>
+              <span class="status-pill status-safe">Safe</span>
+            </div>
+            <p>Confidence: <strong>92%</strong></p>
+            <p>Security Recommendations: Continue with caution and review sender details.</p>
+          </div>
+        </article>
+
+        <article class="dashboard-card glass">
+          <h3>Scan Checks</h3>
+          <div class="report-list">
+            <div class="list-row"><span>HTTPS Availability</span><strong>Secure</strong></div>
+            <div class="list-row"><span>URL Length</span><strong>Normal</strong></div>
+            <div class="list-row"><span>IP Address Usage</span><strong>No IP</strong></div>
+            <div class="list-row"><span>Suspicious Keywords</span><strong>Low Risk</strong></div>
+            <div class="list-row"><span>Domain Information</span><strong>Verified</strong></div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </main>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

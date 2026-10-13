@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PhishGuard | Protect Yourself From Phishing Attacks</title>
+  <meta name="description" content="PhishGuard helps users identify malicious URLs and phishing emails through a modern cybersecurity dashboard." />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container navbar">
+      <a href="index.html" class="brand" aria-label="PhishGuard home">
+        <span class="brand-mark">PG</span>
+        <span>PHISHGUARD</span>
+      </a>
+
+      <nav class="nav-links" aria-label="Main navigation">
+        <a href="#home">Home</a>
+        <a href="#scanner">Scanner</a>
+        <a href="#stats">Statistics</a>
+        <a href="#how-it-works">How It Works</a>
+        <a href="awareness.html">Awareness</a>
+        <a href="contact.html">Contact</a>
+        <a href="login.html">Login</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="register.html" class="btn btn-ghost">Register</a>
+        <button class="mobile-toggle" aria-label="Toggle navigation">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <span class="eyebrow">Cybersecurity Defense</span>
+          <h1>Protect Yourself From Phishing Attacks</h1>
+          <p>
+            Phishing attacks deceive users through fake websites, malicious links, and convincing emails.
+            PhishGuard analyzes suspicious URLs and content to protect your identity, data, and digital trust.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#scanner" class="btn btn-primary">Scan URL</a>
+            <a href="awareness.html" class="btn btn-ghost">Learn More</a>
+          </div>
+
+          <div class="hero-badges">
+            <span>Real-time URL Analysis</span>
+            <span>Threat Detection</span>
+            <span>Email Safety Check</span>
+          </div>
+        </div>
+
+        <div class="scan-panel glass">
+          <div class="url-scanner" id="scanner">
+            <h3>Phishing URL Scanner</h3>
+            <form id="urlScanForm">
+              <label for="urlInput" class="muted">Enter URL</label>
+              <div class="scan-input-group">
+                <input id="urlInput" class="input" type="url" value="https://example.com" placeholder="https://example.com" required />
+              </div>
+              <div class="scan-input-group">
+                <button type="submit" class="btn btn-primary">Analyze URL</button>
+                <button type="button" class="btn btn-ghost" data-clear-target="urlInput">Clear</button>
+              </div>
+            </form>
+
+            <div id="scanResult" class="scan-results visible result-safe" aria-live="polite">
+              <div class="result-status">
+                <h3>Link is Safe</h3>
+                <span class="status-pill status-safe">Safe</span>
+              </div>
+              <div class="metrics-grid">
+                <div class="metric-box">
+                  <small>Confidence Score</small>
+                  <strong>94%</strong>
+                </div>
+                <div class="metric-box">
+                  <small>Risk Score</small>
+                  <strong>18%</strong>
+                </div>
+                <div class="metric-box">
+                  <small>HTTPS Status</small>
+                  <strong>Enabled</strong>
+                </div>
+                <div class="metric-box">
+                  <small>Domain Info</small>
+                  <strong>example.com</strong>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="stats">
+      <div class="container">
+        <div class="section-header">
+          <span class="eyebrow">Threat Monitoring</span>
+          <h2>Protection Metrics That Matter</h2>
+        </div>
+
+        <div class="stats-grid">
+          <article class="stat-card glass">
+            <div class="stat-icon">📈</div>
+            <div class="stat-number"><span data-count="15000" data-suffix="+">0</span></div>
+            <p>Total URLs Scanned</p>
+          </article>
+
+          <article class="stat-card glass">
+            <div class="stat-icon">⚠️</div>
+            <div class="stat-number"><span data-count="4200" data-suffix="+">0</span></div>
+            <p>Threats Detected</p>
+          </article>
+
+          <article class="stat-card glass">
+            <div class="stat-icon">✅</div>
+            <div class="stat-number"><span data-count="10800" data-suffix="+">0</span></div>
+            <p>Safe Websites</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section how-it-works" id="how-it-works">
+      <div class="container">
+        <div class="section-header">
+          <span class="eyebrow">How It Works</span>
+          <h2>Simple Steps, Strong Protection</h2>
+        </div>
+
+        <div class="cards-grid">
+          <article class="info-card step-card glass">
+            <div class="step-badge">1</div>
+            <h3>Enter URL</h3>
+            <p>Paste any suspicious URL into the scanner, and the system begins a quick risk assessment.</p>
+          </article>
+
+          <article class="info-card step-card glass">
+            <div class="step-badge">2</div>
+            <h3>Detection Engine Analysis</h3>
+            <p>PhishGuard checks HTTPS usage, suspicious keywords, URL length, IP pattern, and risk signals.</p>
+          </article>
+
+          <article class="info-card step-card glass">
+            <div class="step-badge">3</div>
+            <h3>View Security Report</h3>
+            <p>Receive a clear result with a confidence score, risk score, and practical recommendations.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <a href="index.html" class="brand">
+            <span class="brand-mark">PG</span>
+            <span>PHISHGUARD</span>
+          </a>
+          <p style="margin-top: 16px; max-width: 320px;">
+            A smart phishing detection and awareness platform designed to help users stay secure online.
+          </p>
+          <div class="socials">
+            <a href="#" aria-label="Facebook">f</a>
+            <a href="#" aria-label="Twitter">x</a>
+            <a href="#" aria-label="LinkedIn">in</a>
+          </div>
+        </div>
+
+        <div>
+          <h3>Quick Links</h3>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="url_analyzer.html">URL Analyzer</a></li>
+            <li><a href="email_analyzer.html">Email Analyzer</a></li>
+            <li><a href="reports.html">Reports</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3>Support</h3>
+          <ul class="footer-links">
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="awareness.html">Education</a></li>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="register.html">Register</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3>Contact</h3>
+          <ul class="footer-links">
+            <li>hello@phishguard.com</li>
+            <li>+1 (555) 014-2388</li>
+            <li>Cyber Avenue, Nairobi</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
